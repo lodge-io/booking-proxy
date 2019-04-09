@@ -8,12 +8,6 @@
   - https://github.com/lodge-io/reviews-module
   - https://github.com/lodge-io/description-module
   - https://github.com/lodge-io/booking-module
-  
-## Table of Contents
-
-1. [Usage](#Usage)
-1. [Requirements](#requirements)
-1. [Development](#development)
 
 ## Usage
 
