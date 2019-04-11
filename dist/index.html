@@ -2,18 +2,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
     <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/styled-components/4.2.0/styled-components.js"></script>  
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Carter+One'>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="theme-color" content="#000000" />
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div id="asdfasdf12">asdf</div>
     <div id="root"></div>
     <div class="page-col-holder">
       <div class="page-col1">
@@ -28,16 +23,23 @@
     <script src="http://localhost:3117/bundle.js"></script>
     <script src="http://localhost:3000/bundle.js"></script>
     <script src="http://localhost:3002/bundle.js"></script>  
-
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js'></script>
-  
-    <script src='https://unpkg.com/react-infinite-scroll-component@4.5.0/lib/index.js'></script>
     <script src="http://localhost:8000/bundle.js"></script>
     <script>
+      var app = document.querySelector('.page-col2');
+      var photo = document.getElementById('root')
       console.log(window.location.pathname);
+      console.log(window.pageYOffset);
+      console.log(document.getElementById('root').offsetHeight);
+      window.addEventListener('scroll', () => {
+        if (window.scrollY < photo.offsetHeight) {
+          app.classList.remove('fixed-pos');
+        } else {
+          app.classList.add('fixed-pos');
+        }
+        // console.log(window.scrollY)
+      });
       ReactDOM.render(
-        React.createElement(Booking, {id: 11}),
+        React.createElement(Booking, { id: 11, width:376 }),
         document.getElementById('booking-module')
       );
     </script>
