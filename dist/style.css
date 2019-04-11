@@ -1,0 +1,14 @@
+.page-col-holder {
+  margin: auto;
+  width: 60%;
+  display:flex;
+}
+.page-col1 {
+  width: 60%;
+  margin: 30px;
+}
+.page-col2 {
+  position: fixed;
+  top: 20px;
+  right: 200px
+}
